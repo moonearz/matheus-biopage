@@ -7,7 +7,25 @@
         <script defer src ="/dist/script.js"></script>
     </head>
     <body>
-        <h1>Matheus Oliveira</h1>
+        <header class = "header container">
+            <div class="header__title">
+                <h1>Matheus Oliveira</h1>
+                <span class = "header__subtitle" >Assistant Manager at Trader Joe's</span>
+            </div>
+            <fieldset class = "header__toggle toggle" aria-label = "theme toggle" role = "radiogroup">
+                <label for="dime">Dime Loco</label>
+                <label for = "quiet-mode">Silent</label>
+                <label for = "money">Money</label>
+                <div class="toggle__wrapper">
+                    <input type = "radio" name = "theme" id = "dime">
+                    <input type = "radio" name = "theme" id = "money">
+                    <input type = "radio" name = "theme" id = "quiet-mode" checked>
+                    <span aria-hidden="true" class = "toggle__background"></span>
+                    <span aria-hidden="true" class = "toggle__button"></span>
+                </div>
+            </fieldset>
+        </header>
+        <main>
         <nav class = "sidebar">
             <a href="hpage.html">Home</a></li>
             <a href="resume.pdf">Resume</a></li>
@@ -25,5 +43,6 @@
             <li>Cell: 786-449-9479</li>
             <li>Test Link: <a href="https://lichess.org">lichess</a></li>
         </ul>
+        </main> 
     </body>
     
