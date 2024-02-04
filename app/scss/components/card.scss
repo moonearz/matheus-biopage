@@ -1,5 +1,14 @@
 @use '../util' as *;
 
 .card {
-    padding: rem(20);
+    background: var(--card);
+    color: var(--text1);
+    width: rem(255);
+    text-align: center;
+    padding: rem(25);
+    &__title {
+        color: var(--top-bg);
+        font-family: var(--font-bold);
+        font-weight: 700;
+    }
 }
