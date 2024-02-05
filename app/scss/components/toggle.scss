@@ -1,8 +1,7 @@
 @use '../util' as *;
 .toggle {
     display: grid;
-    grid-template-columns: 1fr rem(60) 1fr;
-    grid-template-rows: 1fr rem(24);
+    grid-template-columns: 1fr rem(48) 1fr;
     gap: rem(4.8) rem(8);
     border: none;
     margin: 0;
@@ -11,17 +10,14 @@
         font-size: rem(14);
         align-self: center;
         &[for = 'dime'] {
-            grid-column: 1 / 2;
+            grid-column: 1;
             justify-self: end;
         }
-        &[for = 'quiet-mode'] {
-            grid-column: 1 / 4;
-            grid-row: 2 / 3;
-            justify-self: center;
-            align-self: start;
-        }
         &[for = 'money'] {
-            grid-column: 3 / 4;
+            grid-column: 3;
+        }
+        &:hover {
+            cursor: pointer;
         }
     }
     &__wrapper {
@@ -36,8 +32,8 @@
         width: rem(19);
         height: rem(19);
         margin-right: rem(-2);
-        &:focus ~ .toggle__button {
-            border: 2px solid whitesmoke;
+        &:hover {
+            cursor: pointer;
         }
     }
     &__background {

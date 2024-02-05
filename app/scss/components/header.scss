@@ -19,3 +19,11 @@
         color: var(--text1);
     }
 }
+.contact {
+    padding: rem(15);
+    height: 100%;
+    background-color: var(--darkblue);
+    &:hover {
+        cursor: pointer;
+    }
+}

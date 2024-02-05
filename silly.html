@@ -7,5 +7,15 @@
         <script defer src ="/dist/script.js"></script>
     </head>
     <body>
+        <fieldset class = "header__toggle toggle" aria-label = "theme toggle" role = "radiogroup">
+            <div class="toggle__wrapper">
+                <input type = "radio" name = "theme" id = "dime">
+                <input type = "radio" name = "theme" id = "money">
+                <span aria-hidden="true" class = "toggle__background"></span>
+                <span aria-hidden="true" class = "toggle__button"></span>
+            </div>
+            <label for="dime">Dime</label>
+            <label for = "money">Money</label>
+        </fieldset>
         I'm gonna put the silly stuff here
     </body>
