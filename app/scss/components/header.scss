@@ -3,6 +3,7 @@
     display:flex;
     flex-wrap: wrap;
     margin-top: rem(36);
+    font-family: var(--font-regular);
     @include breakpoint(medium) {
         justify-content: space-between;
         align-items: center;
@@ -15,7 +16,6 @@
     }
     &__subtitle {
         font-size: rem(14);
-        font-weight: 700;
         color: var(--text1);
     }
 }

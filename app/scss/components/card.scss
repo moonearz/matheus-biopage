@@ -1,14 +1,59 @@
 @use '../util' as *;
 
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(30);
+    @include breakpoint(medium) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(large) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
 .card {
     background: var(--card);
     color: var(--text1);
-    width: rem(255);
     text-align: center;
     padding: rem(25);
+    height: rem(165);
+    border-radius: rem(5);
+    position: relative;
+    overflow: hidden;
+    transition: background 100ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--card-hover);
+    }
     &__title {
+        font-size: rem(30);
         color: var(--top-bg);
-        font-family: var(--font-bold);
+        font-family: var(--font-regular);
         font-weight: 700;
+    }
+    &__home {
+        border-top: rem(5) solid var(--toggle-bg-start);
+    }
+    &__resume {
+        border-top: rem(5) solid var(--resume-bg);
+    }
+    &__bio {
+        border-top: rem(5) solid var(--bio-bg);
+    }
+    &__proj {
+        &::before {
+            content: '';
+            height: rem(5);
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(225deg, var(--brazil-start), var(--brazil-middle), var(--brazil-end));
+            }
+    }
+    &__silly {
+        border-top: rem(5) solid var(--silly-bg);
     }
 }
